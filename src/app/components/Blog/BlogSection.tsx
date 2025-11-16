@@ -41,7 +41,7 @@ export default function BlogSection() {
             <Link
               key={index}
               href={{
-                pathname: "/blog",
+                pathname: "/blog/details",
                 query: {
                   data: JSON.stringify(item),
                 },
