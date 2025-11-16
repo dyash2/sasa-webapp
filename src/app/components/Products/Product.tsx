@@ -1,13 +1,18 @@
+"use client";
+
 import ProductBox from "./Product-Box/ProductBox";
-import ProuductSidebar from "./Sidebar";
+import ProductSidebar from "./Sidebar";
+import { Suspense } from "react";
 
 export default function Product() {
   return (
-    <div className="product-container">
-      <div className="container">
-        <ProductBox></ProductBox>
-        <ProuductSidebar></ProuductSidebar>
+    <Suspense fallback={<div className="text-center py-10">Loading products...</div>}>
+      <div className="product-container">
+        <div className="container">
+          <ProductBox />
+          <ProductSidebar />
+        </div>
       </div>
-    </div>
+    </Suspense>
   );
 }
