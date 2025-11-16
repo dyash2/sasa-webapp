@@ -1,0 +1,105 @@
+/*
+ * Blog Detail Page Styles
+ * Focused on readability and a modern aesthetic.
+ */
+
+.blog-detail-container {
+    max-width: 1000px;
+    margin: 4rem auto;
+    padding: 2rem 1.5rem;
+    font-family: 'Inter', sans-serif;
+    background-color: #ffffff;
+    border-radius: 12px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+}
+
+/* Header and Title */
+.blog-header {
+    margin-bottom: 2rem;
+    text-align: center;
+}
+
+.blog-category {
+    display: inline-block;
+    padding: 0.25rem 0.75rem;
+    margin-bottom: 0.75rem;
+    font-size: 0.875rem;
+    font-weight: 600;
+    color: #4a5568; /* Gray-700 */
+    background-color: #f7fafc; /* Gray-50 */
+    border: 1px solid #edf2f7; /* Gray-200 */
+    border-radius: 9999px; /* Pill shape */
+}
+
+.blog-title {
+    font-size: 2.5rem;
+    font-weight: 800;
+    line-height: 1.2;
+    color: #1a202c; /* Gray-900 */
+    margin-bottom: 1rem;
+}
+
+/* Metadata (Author & Date) */
+.blog-metadata {
+    font-size: 1rem;
+    color: #718096; /* Gray-500 */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1.5rem;
+}
+
+.metadata-separator {
+    content: '';
+    width: 4px;
+    height: 4px;
+    background-color: #a0aec0; /* Gray-400 */
+    border-radius: 50%;
+}
+
+/* Featured Image */
+.blog-feature-img {
+    width: 100%;
+    height: auto;
+    max-height: 500px;
+    object-fit: cover;
+    border-radius: 12px;
+    margin: 2rem 0;
+}
+
+/* Content */
+.blog-content {
+    font-size: 1.125rem; /* Large text for readability */
+    line-height: 1.8;
+    color: #4a5568; /* Gray-700 */
+    text-align: justify;
+}
+
+.blog-content p {
+    margin-bottom: 1.5rem;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .blog-detail-container {
+        margin: 2rem 1rem;
+        padding: 1.5rem;
+    }
+
+    .blog-title {
+        font-size: 2rem;
+    }
+
+    .blog-metadata {
+        flex-direction: column;
+        gap: 0.5rem;
+    }
+
+    .metadata-separator {
+        display: none;
+    }
+
+    .blog-content {
+        font-size: 1rem;
+    }
+}

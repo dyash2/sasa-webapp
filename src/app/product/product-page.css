@@ -1,0 +1,305 @@
+/* --- Global Reset/Setup --- */
+.product-page-container {
+    font-family: Arial, sans-serif;
+    color: #333;
+    background-color: #f7f7f7; /* Light gray background */
+    min-height: 100vh;
+    padding: 3rem 1rem;
+}
+
+.product-wrapper {
+    max-width: 1200px;
+    margin: 0 auto;
+    background-color: #fff;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
+    border-radius: 12px;
+    overflow: hidden;
+    padding: 3rem;
+}
+
+/* --- Layout: Flexbox for Image and Details --- */
+.product-content-flex {
+    display: flex;
+    gap: 40px;
+    flex-wrap: wrap; /* Allows wrapping on smaller screens */
+    padding-top: 2.5rem;
+}
+
+.product-image-section {
+    width: 45%; /* Approximately 1/2, slightly less */
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    padding-top: 10px;
+}
+
+.product-image {
+    max-width: 400px;
+    height: auto;
+    object-fit: contain;
+}
+
+.product-details-section {
+    width: 50%; /* Approximately 1/2, slightly more */
+    padding-top: 10px;
+}
+
+/* --- Typography and Header --- */
+.product-title {
+    font-size: 2.5rem; /* 40px */
+    font-weight: 300; /* Light */
+    margin-bottom: 0.5rem;
+}
+
+/* --- Rating and Price --- */
+.product-rating {
+    display: flex;
+    align-items: center;
+    margin-bottom: 1rem;
+    font-size: 0.875rem; /* 14px */
+    color: #6b7280;
+}
+
+.star-icon {
+    width: 1rem;
+    height: 1rem;
+    color: #fcd34d; /* Gold */
+    margin-right: 2px;
+}
+
+.star-icon.gray {
+    color: #d1d5db; /* Gray */
+}
+
+.price-box {
+    display: flex;
+    align-items: flex-end;
+    margin-bottom: 1rem;
+}
+
+.old-price {
+    font-size: 1.5rem; /* 24px */
+    font-weight: 600;
+    color: #808080;
+    text-decoration: line-through;
+    margin-right: 0.5rem;
+}
+
+.current-price {
+    font-size: 2.5rem; /* 40px */
+    font-weight: 700;
+    color: #b40000; /* Deep Red */
+}
+
+/* --- Save Badge --- */
+.save-badge {
+    display: inline-block;
+    background-color: #ffeaef;
+    color: #b40000;
+    font-size: 0.75rem; /* 12px */
+    padding: 2px 8px;
+    border-radius: 4px;
+    margin-bottom: 1rem;
+}
+
+/* --- Shipping/Promotion Box --- */
+.promotion-box {
+    background-color: #f3f4f6;
+    padding: 12px;
+    border-radius: 6px;
+    font-size: 0.875rem;
+    color: #4b5563;
+    margin-bottom: 1.5rem;
+}
+
+/* --- Quantity Selector --- */
+.quantity-selector-label {
+    display: block;
+    font-size: 0.875rem;
+    font-weight: 500;
+    color: #4b5563;
+    margin-bottom: 0.5rem;
+}
+
+.quantity-control {
+    display: flex;
+    align-items: center;
+    border: 1px solid #d1d5db;
+    border-radius: 4px;
+    width: fit-content;
+    margin-bottom: 1.5rem;
+}
+
+.qty-button {
+    padding: 12px;
+    color: #4b5563;
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.15s;
+}
+
+.qty-button:hover {
+    background-color: #f3f4f6;
+}
+
+.qty-input {
+    width: 48px;
+    text-align: center;
+    border-left: 1px solid #d1d5db;
+    border-right: 1px solid #d1d5db;
+    padding: 8px 0;
+    outline: none;
+}
+
+/* --- Action Buttons (CTA) --- */
+.action-buttons-group {
+    margin-bottom: 2rem;
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+}
+
+.btn-primary {
+    width: 100%;
+    background-color: #1b1b1b; /* Dark background */
+    color: #fff;
+    padding: 12px 20px;
+    border-radius: 9999px; /* Full circle for rounded corners */
+    font-size: 1.125rem;
+    font-weight: 500;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.2s;
+}
+
+.btn-primary:hover {
+    background-color: #333;
+}
+
+.btn-secondary {
+    width: 100%;
+    color: #1b1b1b;
+    border: 1px solid #d1d5db;
+    background-color: #fff;
+    padding: 12px 20px;
+    border-radius: 9999px;
+    font-size: 1.125rem;
+    font-weight: 500;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: background-color 0.2s;
+}
+
+.btn-secondary:hover {
+    background-color: #f9fafb;
+}
+
+.btn-secondary svg {
+    margin-right: 8px;
+}
+
+/* --- Description and Accordions --- */
+.description-section {
+    margin-top: 3rem;
+    padding-top: 2rem;
+    border-top: 1px solid #e5e7eb;
+}
+
+.section-header {
+    font-size: 1.5rem; /* 24px */
+    font-weight: 300; /* Light */
+    color: #1b1b1b;
+    margin-bottom: 1rem;
+}
+
+.description-text {
+    color: #4b5563;
+    line-height: 1.6;
+    margin-bottom: 1.5rem;
+}
+
+.section-note {
+    font-size: 0.875rem;
+    color: #6b7280;
+    font-style: italic;
+    margin-bottom: 2rem;
+}
+
+.shop-button-container {
+    text-align: center;
+    margin-bottom: 2.5rem;
+}
+
+.shop-button {
+    padding: 10px 24px;
+    border: 1px solid #d1d5db;
+    border-radius: 9999px;
+    color: #1b1b1b;
+    background-color: #fff;
+    transition: background-color 0.2s;
+}
+
+.shop-button:hover {
+    background-color: #f3f4f6;
+}
+
+/* --- Accordion Style --- */
+.accordion-group {
+    padding-top: 2rem;
+    border-top: 1px solid #e5e7eb;
+}
+
+.accordion-item {
+    border-bottom: 1px solid #e5e7eb;
+    padding-bottom: 1rem;
+    margin-bottom: 1rem;
+}
+
+.accordion-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    cursor: pointer;
+    color: #4b5563;
+    padding-right: 4px;
+}
+
+.accordion-header:hover {
+    color: #1f2937;
+}
+
+.accordion-header svg {
+    color: #9ca3af;
+}
+
+/* --- Footer Share Link --- */
+.share-link {
+    display: flex;
+    align-items: center;
+    color: #6b7280;
+    margin-top: 2rem;
+    cursor: pointer;
+    transition: color 0.2s;
+}
+
+.share-link:hover {
+    color: #333;
+}
+
+.share-link svg {
+    margin-right: 8px;
+}
+
+/* --- Mobile Responsiveness --- */
+@media (max-width: 1024px) {
+    .product-content-flex {
+        flex-direction: column;
+    }
+    .product-image-section,
+    .product-details-section {
+        width: 100%;
+    }
+}
